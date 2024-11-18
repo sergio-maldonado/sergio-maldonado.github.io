@@ -3,7 +3,7 @@ const ulResearchers = document.querySelector("#researchers")
 class Researcher {
   constructor(nombre, img, link, body) {
     this.nombre = nombre
-    this.img = img || "../assets/images/unknown_profile.jpg"
+    this.img = img || "../assets/images/unknown_person.png"
     this.link = link
     this.body = body
   }
@@ -30,7 +30,7 @@ const researchers = [
     "Fluid-cell (algae) interactions",
     "University of Southampton, UK",
   ]),
-  new Researcher("Nahum Banks", "../assets/images/Banks.jpeg", "https://www.linkedin.com/in/nahum-banks-a31545252", [
+  new Researcher("Nahum Banks", "../assets/images/Banks.png", "https://www.linkedin.com/in/nahum-banks-a31545252", [
     "Ph.D. Student",
     "Physics-informed AI",
     "University of Southampton, UK",
@@ -40,7 +40,7 @@ const researchers = [
     "Physics-informed AI",
     "University of Southampton, UK",
   ]),
-  new Researcher("Henry Davies", "../assets/images/Davies.jpg", "https://www.linkedin.com/in/henry-davies-162aa2198/", [
+  new Researcher("Henry Davies", "../assets/images/Davies.png", "https://www.linkedin.com/in/henry-davies-162aa2198/", [
     "MEng (Aero) Student",
     "Physics-informed AI",
     "University of Southampton, UK",
