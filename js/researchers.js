@@ -30,7 +30,7 @@ const researchers = [
     "Fluid-cell (algae) interactions",
     "University of Southampton, UK",
   ]),
-  new Researcher("Nahum Banks", "", "", [
+  new Researcher("Nahum Banks", "../assets/images/Banks.jpeg", "https://www.linkedin.com/in/nahum-banks-a31545252", [
     "Ph.D. Student",
     "Physics-informed AI",
     "University of Southampton, UK",
@@ -40,7 +40,7 @@ const researchers = [
     "Physics-informed AI",
     "University of Southampton, UK",
   ]),
-  new Researcher("Henry Davies", "", "", [
+  new Researcher("Henry Davies", "../assets/images/Davies.jpg", "https://www.linkedin.com/in/henry-davies-162aa2198/", [
     "MEng (Aero) Student",
     "Physics-informed AI",
     "University of Southampton, UK",
