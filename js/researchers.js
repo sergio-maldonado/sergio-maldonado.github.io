@@ -62,7 +62,7 @@ const stringResearchers = researchers
     ({ nombre, img, link, body }) => `
 
         <li class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-5">
-          <img src="${img}" alt="" class="w-75 mb-3 d-block mx-auto" />
+          <img src="${img}" alt="" class="w-75 rounded-circle mb-3 d-block mx-auto" />
           ${
             !link
               ? `
