@@ -35,7 +35,7 @@ const researchers = [
     "Physics-informed AI",
     "University of Southampton, UK",
   ]),
-  new Researcher("Nastja Vodopivec", "", "", [
+  new Researcher("Nastja Vodopivec", "../assets/images/Vodopivec.png", "https://www.linkedin.com/in/nastja-vodopivec-a3581206/", [
     "Ph.D. Student",
     "Physics-informed AI",
     "University of Southampton, UK",
@@ -45,12 +45,12 @@ const researchers = [
     "Physics-informed AI",
     "University of Southampton, UK",
   ]),
-  new Researcher("Fabián Hernández R.", "", "", [
+  new Researcher("Fabián Hernández R.", "../assets/images/Hernandez.png", "https://www.linkedin.com/in/fabian-hr2102/", [
     "BSc (Physics) Student",
     "CFD and Physics-informed AI",
     "Tecnológico de Monterrey, Mex.",
   ]),
-  new Researcher("Iván A. Chávez R.", "", "", [
+  new Researcher("Iván A. Chávez R.", "../assets/images/Chavez.png", "https://www.linkedin.com/in/ivan-alexis-chavez-ramirez-555413316", [
     "BSc (Physics) Student",
     "Physics-informed AI",
     "Tecnológico de Monterrey, Mex.",
