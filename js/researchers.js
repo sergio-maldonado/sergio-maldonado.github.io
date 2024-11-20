@@ -1,19 +1,19 @@
-const ulResearchers = document.querySelector("#researchers")
+const ulResearchers = document.querySelector("#researchers");
 
 class Researcher {
   constructor(nombre, img, link, body, social) {
-    this.nombre = nombre
-    this.img = img || "../assets/images/unknown_person.png"
-    this.link = link
-    this.body = body
-    this.social = social
+    this.nombre = nombre;
+    this.img = img || "../assets/images/unknown_person.png";
+    this.link = link;
+    this.body = body;
+    this.social = social;
   }
 }
 
 class ResearcherSocial {
   constructor(nombre, link) {
-    this.nombre = nombre
-    this.link = link
+    this.nombre = nombre;
+    this.link = link;
   }
 }
 
@@ -27,19 +27,7 @@ const researchers = [
       "Experimental Fluid Mechanics",
       "University of Southampton, UK",
     ],
-    [
-      new ResearcherSocial("github", "https://github.com/sergio-maldonado"),
-      new ResearcherSocial(
-        "google-scholar",
-        "https://scholar.google.com/citations?user=1ZemyHYAAAAJ&hl=en"
-      ),
-      new ResearcherSocial("orcid", "https://orcid.org/0000-0001-6072-122X"),
-      new ResearcherSocial(
-        "research-gate",
-        "https://www.researchgate.net/profile/Sergio-Maldonado-3"
-      ),
-      new ResearcherSocial("mail", "s.maldonado@soton.ac.uk"),
-    ]
+    []
   ),
   new Researcher(
     "Will Crawford-Jones",
@@ -50,7 +38,9 @@ const researchers = [
       "Particle-fluid interactions",
       "University of Southampton, UK",
     ],
-    []
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/william-crawford-jones-88a5089a/")]
   ),
   new Researcher(
     "Laura Coombs",
@@ -61,65 +51,87 @@ const researchers = [
       "Fluid-cell (algae) interactions",
       "University of Southampton, UK",
     ],
-    []
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/laura-coombs-125874162/")]
   ),
   new Researcher(
     "Nahum Banks",
     "../assets/images/Banks.png",
-    "https://www.linkedin.com/in/nahum-banks-a31545252",
+    "",
     ["Ph.D. Student", "Physics-informed AI", "University of Southampton, UK"],
-    []
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/nahum-banks-a31545252")]
   ),
   new Researcher(
     "Nastja Vodopivec",
     "../assets/images/Vodopivec.png",
-    "https://www.linkedin.com/in/nastja-vodopivec-a3581206/",
+    "",
     ["Ph.D. Student", "Physics-informed AI", "University of Southampton, UK"],
-    []
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/nastja-vodopivec-a3581206/")]
   ),
   new Researcher(
     "Henry Davies",
     "../assets/images/Davies.png",
-    "https://www.linkedin.com/in/henry-davies-162aa2198/",
+    "",
     [
       "MEng (Aero) Student",
       "Physics-informed AI",
       "University of Southampton, UK",
     ],
-    []
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/henry-davies-162aa2198/")]
   ),
   new Researcher(
     "Fabián Hernández R.",
     "../assets/images/Hernandez.png",
-    "https://www.linkedin.com/in/fabian-hr2102/",
+    "",
     [
       "BSc (Physics) Student",
       "CFD and Physics-informed AI",
       "Tecnológico de Monterrey, Mex.",
     ],
-    []
+    [
+      new ResearcherSocial(
+        "linkedin",
+        "https://www.linkedin.com/in/fabian-hr2102/"),
+      new ResearcherSocial(
+        "github",
+        "https://github.com/fabianhr21"
+      ),
+    ]
   ),
   new Researcher(
     "Iván A. Chávez R.",
     "../assets/images/Chavez.png",
-    "https://www.linkedin.com/in/ivan-alexis-chavez-ramirez-555413316",
+    "",
     [
       "BSc (Physics) Student",
       "Physics-informed AI",
       "Tecnológico de Monterrey, Mex.",
     ],
-    []
+    [
+      new ResearcherSocial(
+        "linkedin",
+        "https://www.linkedin.com/in/ivan-alexis-chavez-ramirez-555413316"
+      ),
+      new ResearcherSocial("link", "http://www.ivanchavez.x10.mx/"),
+    ]
   ),
-]
+];
 
 const socialToHtmlString = (socialArray) => {
-  let socialString = ""
+  let socialString = "";
 
   if (socialArray.length) {
     socialString += `
       <nav>
         <ul class="d-flex align-items-center list-unstyled mb-0">
-    `
+    `;
 
     for (const social of socialArray) {
       switch (social.nombre) {
@@ -135,8 +147,8 @@ const socialToHtmlString = (socialArray) => {
                 <i class="bi bi-github color1 fs-4"></i>
               </a>
             </li>
-          `
-          break
+          `;
+          break;
         case "google-scholar":
           socialString += `
             <li class="me-3">
@@ -149,22 +161,22 @@ const socialToHtmlString = (socialArray) => {
                 <i class="bi bi-google color1 fs-4"></i>
               </a>
             </li>
-          `
-          break
-        case "orcid":
+          `;
+          break;
+        case "link":
           socialString += `
             <li class="me-3">
               <a
                 class="text-decoration-none"
                 href="${social.link}"
                 target="_blank"
-                aria-label="orcid research"
+                aria-label="link"
               >
                 <i class="bi bi-link-45deg color1 fs-4"></i>
               </a>
             </li>
-          `
-          break
+          `;
+          break;
         case "research-gate":
           socialString += `
             <li class="me-3">
@@ -177,8 +189,8 @@ const socialToHtmlString = (socialArray) => {
                 <span class="color1 fs-4">RG</span>
               </a>
             </li>
-          `
-          break
+          `;
+          break;
         case "mail":
           socialString += `
             <li class="me-3">
@@ -191,21 +203,35 @@ const socialToHtmlString = (socialArray) => {
                 <i class="bi bi-envelope color1 fs-4"></i>
               </a>
             </li>
-          `
-          break
+          `;
+          break;
         default:
-          break
+          break;
+        case "linkedin":
+          socialString += `
+            <li class="me-3">
+              <a
+                class="text-decoration-none"
+                href="${social.link}"
+                target="_blank"
+                aria-label="linkedin"
+              >
+                <i class="bi bi-linkedin color1 fs-4"></i>
+              </a>
+            </li>
+          `;
+          break;
       }
     }
 
     socialString += `
         </ul>
       </nav>
-    `
+    `;
   }
 
-  return socialString
-}
+  return socialString;
+};
 
 const stringResearchers = researchers
   .map(
@@ -230,6 +256,6 @@ const stringResearchers = researchers
         </li>
       `
   )
-  .join("")
+  .join("");
 
-ulResearchers.innerHTML = stringResearchers
+ulResearchers.innerHTML = stringResearchers;
