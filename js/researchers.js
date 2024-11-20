@@ -20,7 +20,7 @@ class ResearcherSocial {
 const researchers = [
   new Researcher(
     "Xinyang Ge, Ph.D.",
-    "",
+    "../assets/images/Ge.png",
     "",
     [
       "Postdoctoral Researcher",
@@ -31,7 +31,7 @@ const researchers = [
   ),
   new Researcher(
     "Will Crawford-Jones",
-    "",
+    "../assets/images/WCJ.png",
     "",
     [
       "Ph.D. Student",
@@ -44,7 +44,7 @@ const researchers = [
   ),
   new Researcher(
     "Laura Coombs",
-    "",
+    "../assets/images/Coombs.jpg",
     "",
     [
       "Ph.D. Student",
