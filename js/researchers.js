@@ -122,6 +122,22 @@ const researchers = [
       new ResearcherSocial("link", "http://www.ivanchavez.x10.mx/"),
     ]
   ),
+  new Researcher(
+    "Eric Fernández G.",
+    "../assets/images/Fernandez.jpg",
+    "",
+    [
+      "BSc (Physics) Student",
+      "Physics-informed AI",
+      "Tecnológico de Monterrey, Mex.",
+    ],
+    [
+      new ResearcherSocial(
+        "linkedin",
+        "https://www.linkedin.com/in/eric-fdz03-/"
+      )
+    ]
+  ),
 ];
 
 const socialToHtmlString = (socialArray) => {
