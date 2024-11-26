@@ -78,13 +78,26 @@ const researchers = [
     "../assets/images/Davies.png",
     "",
     [
-      "MEng (Aero) Student",
+      "MEng (Aerospace) Student",
       "Physics-informed AI",
       "University of Southampton, UK",
     ],
     [new ResearcherSocial(
       "linkedin",
       "https://www.linkedin.com/in/henry-davies-162aa2198/")]
+  ),
+  new Researcher(
+    "Rohan Reddy",
+    "../assets/images/Reddy.jpg",
+    "",
+    [
+      "MEng (Aerospace) Student",
+      "CFD (particle-flow interactions)",
+      "University of Southampton, UK",
+    ],
+    [new ResearcherSocial(
+      "linkedin",
+      "https://www.linkedin.com/in/rohanpreddy")]
   ),
   new Researcher(
     "Fabián Hernández R.",
