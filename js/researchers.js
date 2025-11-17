@@ -30,19 +30,6 @@ const researchers = [
     []
   ),
   new Researcher(
-    "Will Crawford-Jones",
-    "../assets/images/WCJ.png",
-    "",
-    [
-      "Ph.D. Student",
-      "Particle-fluid interactions",
-      "University of Southampton, UK",
-    ],
-    [new ResearcherSocial(
-      "linkedin",
-      "https://www.linkedin.com/in/william-crawford-jones-88a5089a/")]
-  ),
-  new Researcher(
     "Laura Coombs",
     "../assets/images/Coombs.jpg",
     "",
@@ -73,6 +60,22 @@ const researchers = [
       "linkedin",
       "https://www.linkedin.com/in/nastja-vodopivec-a3581206/")]
   ),
+    new Researcher(
+    "Eric Fernández G.",
+    "../assets/images/Fernandez.jpg",
+    "",
+    [
+      "Research Assistant",
+      "Physics-informed AI & optics in fluids",
+      "Tecnológico de Monterrey, Mex.",
+    ],
+    [
+      new ResearcherSocial(
+        "linkedin",
+        "https://www.linkedin.com/in/eric-fdz03-/"
+      )
+    ]
+  ),
   new Researcher(
     "Henry Davies",
     "../assets/images/Davies.png",
@@ -100,21 +103,21 @@ const researchers = [
       "https://www.linkedin.com/in/rohanpreddy")]
   ),
   new Researcher(
-    "Fabián Hernández R.",
-    "../assets/images/Hernandez.png",
+    "Carlos Colchero",
+    "../assets/images/Colchero.jpeg",
     "",
     [
       "BSc (Physics) Student",
-      "CFD and Physics-informed AI",
+      "Physics-informed AI",
       "Tecnológico de Monterrey, Mex.",
     ],
     [
       new ResearcherSocial(
         "linkedin",
-        "https://www.linkedin.com/in/fabian-hr2102/"),
+        "https://www.linkedin.com/in/carlos-colchero-8199a5265/"),
       new ResearcherSocial(
         "github",
-        "https://github.com/fabianhr21"
+        "https://koopmancolch.github.io/OPGroup/members/carlos"
       ),
     ]
   ),
@@ -135,22 +138,7 @@ const researchers = [
       new ResearcherSocial("link", "http://www.ivanchavez.x10.mx/"),
     ]
   ),
-  new Researcher(
-    "Eric Fernández G.",
-    "../assets/images/Fernandez.jpg",
-    "",
-    [
-      "BSc (Physics) Student",
-      "Physics-informed AI",
-      "Tecnológico de Monterrey, Mex.",
-    ],
-    [
-      new ResearcherSocial(
-        "linkedin",
-        "https://www.linkedin.com/in/eric-fdz03-/"
-      )
-    ]
-  ),
+
 ];
 
 const socialToHtmlString = (socialArray) => {
