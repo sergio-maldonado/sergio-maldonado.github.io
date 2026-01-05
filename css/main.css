@@ -36,3 +36,7 @@ body {
 .ar-4-3 {
   aspect-ratio: 4 / 3;
 }
+
+.bg-semi-dark {
+  background-color: #0000006e;
+}
