@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +12,8 @@
     />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/people.css" />
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   </head>
 
   <body>
@@ -88,15 +90,15 @@
               </li>
 
               <li class="me-3">
-              <a
-                class="text-decoration-none"
-                href="https://www.linkedin.com/in/sergio-maldonado-05b05799/"
-                target="_blank"
-                aria-label="linkedin"
-              >
-                <i class="bi bi-linkedin color1 fs-4"></i>
-              </a>
-            </li>
+                <a
+                  class="text-decoration-none"
+                  href="https://www.linkedin.com/in/sergio-maldonado-05b05799/"
+                  target="_blank"
+                  aria-label="linkedin"
+                >
+                  <i class="bi bi-linkedin color1 fs-4"></i>
+                </a>
+              </li>
 
               <li>
                 <a
@@ -114,11 +116,12 @@
         <div class="col-12 col-md-8 mb-3">
           <p class="fs-5">
             Sergio Maldonado’s research interests include various aspects of
-            <b>Environmental Fluid Mechanics</b>, generally falling in the following
-            two categories: <b>particle-fluid interactions</b> (e.g. algae cells in
-            flows, flexible fibres in turbulence, spheres in a boundary layer)
-            and the development of <b>Physics Informed Neural Networks</b> (which may
-            represent an attractive alternative to CFD solvers).
+            <b>Environmental Fluid Mechanics</b>, generally falling in the
+            following two categories: <b>particle-fluid interactions</b> (e.g.
+            algae cells in flows, flexible fibres in turbulence, spheres in a
+            boundary layer) and the development of
+            <b>Physics Informed Neural Networks</b> (which may represent an
+            attractive alternative to CFD solvers).
           </p>
           <h3>Trajectory:</h3>
           <ul class="fs-5 mb-3">
@@ -133,8 +136,7 @@
             </li>
 
             <li>
-              2025-present. Visiting Faculty, Tecnológico
-              de Monterrey, Mexico.
+              2025-present. Visiting Faculty, Tecnológico de Monterrey, Mexico.
             </li>
 
             <li>
@@ -170,11 +172,71 @@
         </div>
       </div>
       <!-- Section researchers -->
-      <section class="row">
-        <div class="col-12">
+      <section id="app" class="row" v-cloak>
+        <div class="col-12 mb-5">
           <hr class="mt-0" />
-          <h2 class="color1">Researchers</h2>
-          <ul class="row list-unstyled mb-0" id="researchers"></ul>
+          <h2 class="color1 mb-0">Researchers</h2>
+        </div>
+        <div class="col-12">
+          <ul class="row list-unstyled mb-0">
+            <li
+              v-for="researcher in researchersFormatted"
+              :key="researcher.nombre"
+              class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5"
+            >
+              <div class="text-center mb-3">
+                <img
+                  :src="researcher.img"
+                  :alt="researcher.nombre"
+                  class="w-75 rounded-circle mb-3 img-researcher"
+                />
+                <a
+                  v-if="researcher.link"
+                  :href="researcher.link"
+                  target="_blank"
+                  class="fw-bold fs-5 color1 mb-0"
+                  >{{ researcher.nombre }}</a
+                >
+                <p v-else class="fw-bold fs-5 color1 mb-0">
+                  {{ researcher.nombre }}
+                </p>
+              </div>
+              <p
+                v-for="(p, index) in researcher.body"
+                :key="index"
+                class="mb-0"
+              >
+                {{ p }}
+              </p>
+              <nav>
+                <ul class="d-flex gap-3 list-unstyled mb-0">
+                  <li v-for="social in researcher.social" :key="social.nombre">
+                    <a
+                      v-if="social.nombre === 'mail'"
+                      :href="`mailto:${social.link}`"
+                      target="_blank"
+                      class="text-decoration-none"
+                    >
+                      <i :class="`bi bi-${social.icon} color1 fs-4`"></i>
+                    </a>
+                    <a
+                      v-else
+                      :href="social.link"
+                      target="_blank"
+                      class="text-decoration-none"
+                    >
+                      <span
+                        v-if="social.nombre === 'research-gate'"
+                        class="color1 fs-4"
+                        >RG</span
+                      >
+                      <i v-else :class="`bi bi-${social.icon} color1 fs-4`"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+          </ul>
         </div>
       </section>
       <!-- Section alumni -->
@@ -187,7 +249,10 @@
             <li>Dr Xinyang Ge, PhD student (2019-2024)</li>
             <li>Dr Xin Qi, PhD student (2019-2024)</li>
             <li>Dr Mahmoud Abbaszadeh, Postdoctoral Researcher (2020-2023)</li>
-            <li>Carlos Colchero, Visiting Research Student (Tecnológico de Monterrey) (2026)</li>
+            <li>
+              Carlos Colchero, Visiting Research Student (Tecnológico de
+              Monterrey) (2026)
+            </li>
             <li>Rohan Reddy, Undergraduate Research Student (2023-2024)</li>
             <li>Jack Malone, Undergraduate Research Student (2023-2024)</li>
             <li>Ellie Newell, Undergraduate Research Student (2020-2021)</li>
