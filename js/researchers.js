@@ -26,7 +26,6 @@ const researchers = [
     [
       "Ph.D. Student",
       "Fluid-cell (algae) interactions",
-      "University of Southampton",
     ],
     [new ResearcherSocial(
       "linkedin",
@@ -37,7 +36,7 @@ const researchers = [
     "Nahum Banks",
     "../assets/images/Banks.png",
     "",
-    ["Ph.D. Student", "Physics-informed AI", "University of Southampton"],
+    ["Ph.D. Student", "Physics-informed AI"],
     [new ResearcherSocial(
       "linkedin",
       "https://www.linkedin.com/in/nahum-banks-a31545252")]
@@ -47,7 +46,7 @@ const researchers = [
     "Nastja Vodopivec",
     "../assets/images/Vodopivec.png",
     "",
-    ["Ph.D. Student", "PINNS for Fluid Mechanics", "University of Southampton"],
+    ["Ph.D. Student", "PINNS for Fluid Mechanics"],
     [new ResearcherSocial(
       "linkedin",
       "https://www.linkedin.com/in/nastja-vodopivec-a3581206/")]
@@ -60,7 +59,6 @@ const researchers = [
     [
       "Ph.D. Student",
       "Experimental Fluid Mechanics",
-      "University of Southampton",
     ],
     [new ResearcherSocial(
       "linkedin",
@@ -74,7 +72,6 @@ const researchers = [
     [
       "Ph.D. Student",
       "PINNs and Experimental Physics",
-      "University of Southampton",
     ],
     [
       new ResearcherSocial(
@@ -94,7 +91,6 @@ const researchers = [
     [
       "MEng (Civil) Student",
       "Coastal Engineering & PINNs",
-      "University of Southampton",
     ],
     [
       new ResearcherSocial(
@@ -111,7 +107,6 @@ const researchers = [
     [
       "MEng (Mechanical) Student",
       "Experimental Fluid Mechanics",
-      "University of Southampton",
     ],
     [
       new ResearcherSocial(
@@ -128,7 +123,6 @@ const researchers = [
     [
       "MEng (Civil) Student",
       "Experimental Fluid Mechanics",
-      "University of Southampton",
     ],
     [
       new ResearcherSocial(
