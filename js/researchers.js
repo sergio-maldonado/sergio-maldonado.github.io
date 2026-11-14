@@ -166,18 +166,16 @@ const socialMedia = {
   linkedin: { icon: "linkedin" },
 };
 
+const researchersFormatted = researchers.map((researcher) => ({
+  ...researcher,
+  social: researcher.social.map((social) => ({
+    ...social,
+    icon: socialMedia[social.nombre].icon,
+  })),
+}));
+
 const app = createApp({
   data() {
-    const researchersFormatted = computed(() => {
-      return researchers.map((researcher) => ({
-        ...researcher,
-        social: researcher.social.map((social) => ({
-          ...social,
-          icon: socialMedia[social.nombre].icon,
-        })),
-      }));
-    });
-
     return {
       researchersFormatted,
     };
